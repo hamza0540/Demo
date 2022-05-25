@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("name").value;
+            document.getElementById("out1").innerHTML = "My name is " + x + ". ";
+
+            var mylist = document.getElementById("places");
+            document.getElementById("out2").innerHTML = "I belong to " + mylist.options[mylist.selectedIndex].text;
+        }
+    </script>
+</head>
+
+<body>
+
+<body style="background-color:brown;">
+    <div class="det">
+        Name: <input type="text" id="name" value="Hamza">
+
+        <form action="">
+            <label for="places">City:</label>
+            <select name="places" id="places" onclick="myFunction()">
+                <option value= "none"></option>
+                <option value= "Punjab">Guwahati</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Shimla">Chennai</option>
+            </select>
+        </form>
+
+    </div>
+    <div>
+        <span id="out1"></span>
+        <span id="out2"></span>
+    </div>
+</body>
+
+</html>
