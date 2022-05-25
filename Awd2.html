@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery get set</title>
+    <style>
+        h3{
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <label for="">Name :</label>
+    <input type="text" id="inname" value=""> <br>
+    <label for=""  >Comments :</label>
+    <textarea id="incomments" name="" id="" cols="30" rows="10"></textarea>
+    <br>
+    <label for="">city</label>
+    <select id="incity">
+        <option value="London">London</option>
+        <option value="Sydney">Sydney</option>
+        <option value="Mumbai">Mumbai</option>
+    </select>
+
+    <p id="para">Hello</p>
+
+    <p>Note: Fill the above form and click the following button to get the value</p>
+
+
+    <button id="btnname">Set name</button>
+    <button id="btncomments">Get Comments</button>
+    <button id="btncity">Get City</button>
+
+
+</body>
+<script src="jquery-3.6.0.min.js"></script> 
+<script>
+    $(document).ready(function(){
+        $("#btnname").click(function(){
+            alert("Name is " + $("#inname").val())
+        })
+
+        $("#btncomments").click(function(){
+            alert($("#incomments").val())
+        })
+        $("#btncity").click(function(){
+            $("#para").text("Hello! The Selected Country is "+$("#incity").val())
+        })
+    })
+
+
+</script>
+
+
+
+
+
+
+
+
+</html>
