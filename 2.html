@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Queued Animation</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background: blue;
+        margin-top: 30px;
+        opacity: 1;
+    }
+
+     p{
+        padding: 5px;
+        
+    }
+</style>
+<script>
+$(document).ready(function(){
+    $("#b1").click(function(){
+        $("#content").animate({width: "200px", height: "200px"})
+        .animate({marginLeft: "200px"}, 3000)
+        .css("fontSize", "60px");
+    });
+
+    $("#b2").click(function(){
+        $("div").toggle();
+    });
+
+    $("#b3").click(function(){
+        $("div").fadeToggle("slow").fadeTo("slow", 0.5);
+    });
+
+      $("#b4").click(function(){
+        $("div").slideToggle("slow");
+    });
+      $("#b5").click(function(){
+        $(div).stop();
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" id="b1">Start Animation</button>
+    <button type="button" id="b2">Hide/Show</button>
+    <button type="button" id="b3">Fade</button>
+    <button type="button" id="b4">slide up/down</button>
+    <button type="button" id="b5">stop</button>
+    
+
+    <div class="box" id="content"><p>chitkara</p></div>
+</body>
+</html>
