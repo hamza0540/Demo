@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+		<HEAD>
+			<TITLE>MY CHITKARA UNIVERSITY</TITLE>
+		</HEAD>
+		<!--LINKS-->
+		<!--EXTERNAL LINK-anchor-->
+		<!--href options: relative url, absolute url, mailto:, #id(internal)-->
+		<!--target option: _blank, _self, _parent, _top-->
+		<BODY>
+			<h1>Classes</h1>
+			
+			<script>
+			
+				class Student{
+				
+					constructor(Name,Rollno,Awdmarks,Oopsmarks){
+						this.name=Name;
+						this.rollno=Rollno;
+						this.awdmarks=Awdmarks;
+						this.oopsmarks=Oopsmarks;
+					
+					}
+					//methods
+					totalmarks(){
+						return this.awdmarks+this.oopsmarks;
+					}
+					static add(a,b){
+						return a+b;
+					}
+					
+					
+				}
+				//create object
+				var student_1=new Student("teena",1001,27,30);
+				var student_2=new Student("meena",1002,25,28);
+				
+				//document.write("hi my name is" +student_1.name + " my roll no is" + student_1.rollno);
+				document.write(student_1.name +" total marks are: "+student_1.totalmarks()+"<br>");
+				document.write(student_2.name + " total marks are: "+student_2.totalmarks()+"<br>");
+				document.write(Student.add(22,55));
+			</script>
+		</BODY>
+</HTML>
+
