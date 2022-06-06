@@ -1,0 +1,111 @@
+React Js
+--> javascript library for building user interfaces
+--> component development
+--> reusablity of code/component
+--> component is created with the help of JSX (javascript extensions)
+
+installation of react js
+OFFLINE
+1. install nodejs and npm(node package manager)
+2. text editor - vs code
+3. install react through cmd/terminal
+								---- npm install -g create-react-app
+								---- create-react-app --version
+								---- create-react-app <appname>
+									
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+ReactDOM.render(comp,root/container, callbackfunction)
+
+
+ONLINE
+CODEPEN/CODESANDBOX
+NINJAS---> STACKBLITZ
+
+
+
+working in JSX
+
+1.var a=<h1>hello! Chitkara</h1>;<----a component
+ 
+2.var a="Chitkara"
+	var b=<h1>hello! {a}</h1>;
+
+3. function Data(){
+  return (
+    <div>
+      <h1>Navjeet Kaur </h1>
+     </div>
+  );
+}
+4. single parent rule, children can be many
+5. className
+
+dynamic clock
+
+const root=ReactDOM.createRoot(document.getElementById('d1'));
+
+function click(){
+  const d=new Date();
+  const a=(
+      <div>
+          <h1> chitkara university </h1>
+          <h2> current time is {d.getSeconds()}</h2>
+      </div>
+  
+  );
+  root.render(a);
+}
+setInterval(click,1000);
+props - special keyword, read only
+class component--state
+
+props example:
+
+function Abc(props){
+  
+  return <p>my name is {props.user}, my roll no is {props.rno}</p>
+}
+
+ReactDOM.render(<Abc user="navjeet" rno="12323"/>, document.getElementById('d1'))
+
+
+class component code:
+
+class Abc extends React.Component{
+  constructor(props){
+    super();
+    this.state={
+      user: props.name,
+      rno: "12345"
+    };
+  }
+  Changevalue=()=>{this.setState({user:"rohan kapoor"});}
+      render(){
+        return(
+          <div>
+        <p>my name is {this.state.user}, my rollno is {this.state.rno}</p>
+            <button type="button" onClick={this.Changevalue}>CLICK ME!!!</button>
+            </div>
+        );
+      };
+  
+}
+ReactDOM.render(<Abc name="ayushi"/>, document.getElementById('d1'))
+
+
+
+
+
+
+
+
+
+
+
