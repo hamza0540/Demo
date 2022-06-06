@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    color: darkblue;
+    padding: 18px;
+    font-weight: bolder;
+    font-family: serif;
+    display: grid;
+    background-color: yellow;
+}
+nav{
+    background-color: darkblue;
+    display: grid;
+    place-items: centre;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul a{
+    display: inline-block;
+    padding: 20px; 
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.5s ease;
+    font-size: 20px;
+}
+nav ul a:hover{
+    background-color: yellow;
+    color: black;
+}
+.menu{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    background-image: url("ko.jpg");
+    
+}
+.menu img{
+    width: 147px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.1s ease;
+    border-radius: 37px;
+}
+.menu img:hover{
+    transform: scale(1.04);
+}
+.menu h4{
+    padding: 7px;
+    text-align: center;
+}
+.menu button{
+    padding: 7px 30px;
+    border: none;
+    outline: none;
+    background-color: darkblue;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 7px;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: 0.4s all;
+}
+.menu button:hover{
+    transform: scale(1.05);
+}
+.branches{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 30px 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    background-image: url("ko.jpg");
+}
+.branches h1{
+    text-align: center;
+    color: chartreuse;
+    font-size: 30px;
+    background-color: darkblue;
+    display: grid;
+}
+.branches img{
+    width: 167px;
+    height: 170px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.1s ease;
+    border-radius: 27px;
+}
+.branches img:hover{
+    transform: scale(1.04);
+}
+.branches h4{
+    padding: 7px;
+    text-align: center;
+}
+.branches button{
+    padding: 20px;
+    border: none;
+    outline: none;
+    background-color: darkblue;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 7px;
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    transition: 0.4s all;
+    font-size: 14px;
+    text-align: center;
+}
+.branches button:hover{
+    transform: scale(1.05);
+}
+.about{
+    padding: 30px 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("ko.jpg");
+    display: grid;
+    color: lightyellow;
+}
+.about h1{
+    text-align: center;
+    color: darkblue;
+    font-size: 30px;
+    background-color: yellow;
+    display: grid;
+}
+.about h2{
+    text-align: center;
+    color: darkblue;
+    font-size: 50px;
+    font-weight: bolder;
+    background-color: yellow;
+}
+.account p{
+    text-align: center;
+    color: yellow;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.about p{
+    font-family: serif;
+    font-size: 30px;
+    padding-top: 90px;
+    font-weight: bolder;
+}
+.about ul{
+    font-family: serif;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.account{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("ko.jpg");
+    padding: 30px 20px;
+    
+}
+.account input{
+    font-size: 24px;
+    margin-top: 20px;
+    background: cornsilk;
+    letter-spacing: 2px;
+    color: black;
+    margin-left: 470px;
+}
+.account label{
+    color: honeydew;
+    font-size: 24px;
+    margin-left: 400px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.btn{
+    background: yellow;
+    width: 240px;
+    height: 40px;
+    color: darkblue;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 40px;
+    margin-left: 450px;
+}
+.btn:hover{
+    background: darkblue;
+    color: yellow;
+}
+

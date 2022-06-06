@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HUNGER HUT | Hungerhut.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        var Name="Welcome To Our Offers Page";
+        alert(Name);
+    </script>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="img/777.jpg" alt="HUNGRY HUT.COM">
+        </div>
+        <ul>
+        
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary"><b>HURRY UP GRAP THE OFFERS SOON</b></h1>
+        <p>Bring happiness to your home </p><br><br><br><br><br>
+        <h2 onclick="this.innerHTML='FEW OFFERS LEFT'">HURRY UP</h2>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Deals of the day</h1>
+        <div class="container">
+            <h1 class="h-primary center">Offer Ends in:</h1>
+            <div id="countdown">
+              <ul>
+                <li><span id="days"></span>days</li>
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+              </ul>
+            </div>
+            <div id="content" class="emoji">
+            
+            </div>
+          </div>
+          <script>
+              (function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "02/24/",
+      birthday = dayMonth + yyyy;
+  
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  //end
+  
+  const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "Offer ends";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+          </script>
+          
+
+                                
+                            
+
+        <div id="services">
+            <div class="box">
+                <img src="img/10.jpg" alt="">
+                <h2 class="h-secondary center">2 cheese burst pizza with coke</h2>
+                <p class="center">Pizza fully loaded with four types of cheese and with thin crust.
+                    Be a foddie and order it as early as possiable.
+                    Avaiable with a variety of toppings in both veg and non-veg.
+                </p><br><br>
+                <a href=file:///C:/Users/ASUS/Desktop/Login/New%20folder/Untitled-1.html><button class="bt">Add to cart</button></a>
+            </div>
+            <div class="box">
+                <img src="img/30.jpg" alt="">
+                <h2 class="h-secondary center">3 Cheese burger with mango shake/2 cold-drinks </h2>
+                <p class="center">Enjoy the Burger with any any drink of your choice.
+                    This burger is made with crispy patty in both veg-nonveg varient 
+                along with 4 types of sauce.
+                </p><br><br>
+                <button class="ct">Add to cart</button>
+            </div>
+            <div class="box">
+                <img src="img/15.jpg" alt="">
+                <h2 class="h-secondary center">2 Aloo Pranthe+1 Gobli prantha with a bowl of curd
+                </h2>
+                <p class="center">Make your breakfast special by ordering our best combo
+                </p><br><br>
+                <button class="nt">Add to cart</button>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Speaciality</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="img/66.jpg" alt="Fast service">
+            </div>
+            <div class="client-item">
+                <img src="img/88.jpg" alt="Quality Product">
+            </div>
+          
+            <div class="client-item">
+                <img src="img/100.jpg" alt="Our Client">
+            </div>
+            
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.Hungerhut.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
